@@ -1,0 +1,21 @@
+body {
+
+    background: linear-gradient(90deg, rgb(255, 255, 255) 1%, rgba(255, 255, 255, 0.998) 46%, rgb(255, 255, 255) 100%);
+}
+.navbar {
+    background-color:rgb(255, 255, 189) ;
+    color: #ffdfdf;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.color {
+
+    background-color: #ffe8c5;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(255, 253, 253, 0.8);
+}
+ 
+label {
+    color: #000000;
+}
