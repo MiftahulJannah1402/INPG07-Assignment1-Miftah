@@ -1,10 +1,11 @@
-<<!DOCTYPE html>
-<html lang="en>"
-<head>
-    <meta charset="utf-8"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>kampus merdeka</title>
-    <!-- css -->
+    <!-- CSS -->
+    <script src="js/storage.js"></script>"
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
@@ -16,28 +17,28 @@
         <div class="container">
         
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-tonggler-icon"></span>
+            <span class="navbar-tongler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto " >
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="background-color: #ffffff; color:rgb(0, 0, 0);">HOME</a>
+                    <a class="nav-link active" aria-current="page" href="#" style="background-color: #f59a08; color:rgb(0, 0, 0);">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="background-color: #ffffff; color:rgb(0, 0, 0);">PROJECT</a> 
+                    <a class="nav-link" href="#" style="background-color: #fbac4b; color:rgb(0, 0, 0);">PROJECT</a> 
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="background-color: #ffffff; color:rgb(0, 0, 0);">GALLERY</a>
+                    <a class="nav-link" href="#" style="background-color: #ffba71; color:rgb(0, 0, 0);">GALLERY</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="background-color: #ffffff; color:rgb(0, 0, 0);">BLOG</a>
+                    <a class="nav-link" href="#" style="background-color: #f2bf7d; color:rgb(0, 0, 0);">BLOG</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style="background-color: #ffffff; color:rgb(0, 0, 0);">MY INVENTORY</a>
+                    <a class="nav-link" href="#" style="background-color: #ffe6af; color:rgb(0, 0, 0);">MY INVENTORY</a>
                   </li>
             
                 </ul>
-            </div>git
+            </div>
           </div>
         </nav>
 
@@ -45,10 +46,10 @@
             <img src="image/pargli _guitar_.jpg" class="img-thumbnail rounded-circle my-auto " alt="..." style="height: 155px; width:155px;">
     
             <div class="d-inline-block mx-5 my-5">
-                <p style="font-size: 25px; font-weight: bold;">Miftahul Jannah</p>
-                <P style="font-size: 15px; ">Front End Developer</p>
+                <p id="nama" style="font-size: 25px; font-weight: bold;">Miftahul Jannah</p>
+                <P id="role" style="font-size: 15px; ">Front End Developer</p>
 
-               <a class="btn  my-3 " href="#" role="" style="background-color: rgb(15, 11, 255); color:white;">Kontak</a>                  
+               <button id="btn" class="btn  my-3 " href="#" role="" style="background-color: rgb(15, 11, 255); color:white;">Edit</button>                  
                <a class="btn btn" href="#" role="" style="background-color: #ffffff; color:rgb(25, 156, 18);">Resume</a>              
 
 
@@ -63,54 +64,121 @@
                   </div>
 
                 <div class="d-inline-block ms-4 my-4 ">
-                  <p>Full Time</p>
-                  <p>22</p>
-                  <p>Jambi</p>
-                  <p>5</p>
-                  <p>mfthjh14@gmail.com</p>
+                  <p id="availability">Full Time</p>
+                  <p id="age">22</p>
+                  <p id="lokasi">Jambi</p>
+                  <p id="experience">5</p>
+                  <p id="email">mfthjh14@gmail.com</p>
                   
       </div>   
 
     </div> 
 
-    <div class="container my-4 color " >
+    <form onsubmit="inputSubmit(event)" class="container my-4 color " id="form-nama" >
       <div class="mb-3 pt-2 ">
-        <label for="formGroupExampleInput" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" name="nama" class="form-control" id="text-nama" placeholder="">
         </div>
         <div class="mb-3">
-          <label for="FromGroupExampleInput2" class="form-label">Role</label>
-          <input type="text" class="form-control" id="FormGroupExampleInput2" placeholder="">
+          <label for="role" class="form-label">Role</label>
+          <input type="text" class="form-control" id="text-role" placeholder="">
         </div>
         <div class="mb-3">
-          <label for="FormGroupExampleInput2" class="form-label">Availability</label>
-          <input type="text" class="form-control" id="FormGroupExampleInput2" placeholder="">
-        </div>
-        <div class="mb-3>"
-          <label for="FormGroupExampleInput2" class="form-label">Age</label>
-          <input type="text" class="form-control id="FroumGroupExampleInput2" placeholder="">
+          <label for="availability" class="form-label">Availability</label>
+          <input type="text" class="form-control" id="text-availability" placeholder="">
         </div>
         <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Lokasi</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+          <label for="age" class="form-label">Age</label>
+          <input type="text" class="form-control" id="text-age" placeholder="">
+        </div>
+        <div class="mb-3">
+        <label for="lokasi" class="form-label">Lokasi</label>
+        <input type="text" class="form-control" id="text-lokasi" placeholder="">
     </div>
        <div class="mb-3">
-        <label for="FormGroupExampleInput2" class="form-label">Years Experience</label>
-        <input type="text" class="form-control" id="FormGroupExampleInput2" placeholder="">
+        <label for="experience" class="form-label">Years Experience</label>
+        <input type="text" class="form-control" id="text-experience" placeholder="">
        </div>
        <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Email</label>
-        <input type="email" class="form-control" id="FormGroupExampleInput2" placeholder="">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="text-email" placeholder="">
        </div>
 
 
-       <a class="btn btn-danger mb-3" href="#" role="" style="width: 100%; ">SUBMIT </a> 
+       <button class="btn btn-danger mb-3" href="#" role="" style="width: 100%; " id="submit" type="submit" onclick="SaveDate()">SUBMIT </button> 
        
-      </div>
-      </div>
+    </form>
+      
 
        
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+      <script>
+
+      var tNama = document. getElementById('nama')
+      var tRole = document. getElementById('role')
+      var tAvailability = document. getElementById('availability')
+      var tAge = document. getElementById('age')
+      var tLokasi = document. getElementById('lokasi')
+      var tExperience = document. getElementById('experience')
+      var tEmail = document. getElementById('email')
+      
+      document.getElementById('text-nama').value = tNama.innerText
+      document.getElementById('text-role').value = tRole.innerText
+      document.getElementById('text-availability').value = tAvailability.innerText
+      document.getElementById('text-age').value = tAge.innerText
+      document.getElementById('text-lokasi').value = tLokasi.innerText
+      document.getElementById('text-experience').value = tExperience.innerText
+      document.getElementById('text-email').value = tEmail.innerText
+    
+      function inputSubmit(event) {
+            var inputNama = document.getElementById('text-nama')
+            var inputRole = document.getElementById('text-role')
+            var inputAvailability = document.getElementById('text-availability')
+            var inputAge = document.getElementById('text-age')
+            var inputLokasi = document.getElementById('text-lokasi')
+            var inputExperience = document.getElementById('text-experience')
+            var inputEmail = document.getElementById('text-email')
+            document.getElementById('nama').innerText = inputNama.value
+            document.getElementById('role').innerText = inputRole.value
+            document.getElementById('availability').innerText = inputAvailability.value
+            document.getElementById('age').innerText = inputAge.value
+            document.getElementById('lokasi').innerText = inputLokasi.value
+            document.getElementById('experience').innerText = inputExperience.value
+            document.getElementById('email').innerText = inputEmail.value
+        
+
+        
+            const form1 = document.getElementById('form-nama')
+            const display = form1.style.display
+            if (display == 'block') {
+                console.log(display, 'display dalam if')
+                form1.style.display = 'none'
+            } else {
+                console.log(display, 'display dalam else')
+                form1.style.display = 'block'
+            }
+            event.preventDefault();
+    
+
+      }
+
+      const buttonTest = document.getElementById('btn')
+        buttonTest.addEventListener('click', function (){
+            const text1 = document.getElementById('form-nama')
+            const display = text1.style.display
+            if (display == 'block') {
+                console.log(display, 'display dalam if')
+                text1.style.display = 'none'
+            } else {
+                console.log(display, 'display dalam else')
+                text1.style.display = 'block'
+            }
+            console.log(display, 'display')
+        });
+
+      </script>
 </body>
 </html>
+

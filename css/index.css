@@ -19,3 +19,6 @@ body {
 label {
     color: #000000;
 }
+#form-nama{
+    display: none;
+}
